@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Sparkles, Heart } from 'lucide-react';
 import { PROJECT_INFO, TEAM_MEMBERS } from '../data/projectData';
+import { VIGI_LOGO } from '../utils/assets';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -16,7 +17,7 @@ export function Footer({ onNavigate }: FooterProps) {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl bg-deepNavy border border-neonCyan/40 p-1 flex items-center justify-center">
                 <img
-                  src="/assets/vigi-lock-logo.png"
+                  src={VIGI_LOGO}
                   alt="VIGI LOCK Logo"
                   className="w-full h-full object-contain"
                 />

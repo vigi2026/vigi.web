@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PROJECT_INFO } from '../data/projectData';
+import { VIGI_LOGO } from '../utils/assets';
 
 interface ConclusionProps {
   onRestartTour: () => void;
@@ -66,7 +67,7 @@ export function Conclusion({
 
           <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-3xl glass-panel-glow p-4 border-2 border-neonCyan/60 flex items-center justify-center shadow-[0_0_50px_rgba(0,245,255,0.4)]">
             <img
-              src="/assets/vigi-lock-logo.png"
+              src={VIGI_LOGO}
               alt="Official VIGI LOCK Logo"
               className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(0,245,255,0.7)]"
             />

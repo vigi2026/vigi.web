@@ -13,6 +13,7 @@ import {
   UserCheck
 } from 'lucide-react';
 import { PROJECT_INFO } from '../data/projectData';
+import { VIGI_LOGO, VIGI_AVATAR } from '../utils/assets';
 
 export interface NavItem {
   id: string;
@@ -93,7 +94,7 @@ export function Navbar({
             >
               <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-deepNavy border border-neonCyan/40 p-1 flex items-center justify-center shadow-[0_0_15px_rgba(0,245,255,0.3)] group-hover:shadow-[0_0_20px_rgba(0,245,255,0.6)] transition-all">
                 <img
-                  src="/assets/vigi-lock-logo.png"
+                  src={VIGI_LOGO}
                   alt="VIGI LOCK Logo"
                   className="w-full h-full object-contain"
                 />
@@ -165,7 +166,7 @@ export function Navbar({
                 {/* VIGI Avatar Mini Ring */}
                 <div className="relative w-5 h-5 rounded-full overflow-hidden border border-neonCyan/60">
                   <img
-                    src="/assets/vigi-avatar.png"
+                    src={VIGI_AVATAR}
                     alt="VIGI"
                     className="w-full h-full object-cover"
                   />

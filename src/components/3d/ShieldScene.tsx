@@ -2,6 +2,7 @@ import React, { useRef, useMemo, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Float, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
+import { VIGI_LOGO } from '../../utils/assets';
 
 // 3D Holographic Logo Plate
 function LogoPlate({ isReducedMotion }: { isReducedMotion: boolean }) {
@@ -10,7 +11,7 @@ function LogoPlate({ isReducedMotion }: { isReducedMotion: boolean }) {
   const outerRingRef = useRef<THREE.Group>(null);
   
   // Load official logo texture
-  const logoTexture = useTexture('/assets/vigi-lock-logo.png');
+  const logoTexture = useTexture(VIGI_LOGO);
 
   useFrame((state, delta) => {
     if (isReducedMotion) return;
@@ -170,7 +171,7 @@ export function ShieldScene2DFallback() {
       {/* Card Plate with Logo */}
       <div className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 rounded-2xl glass-panel p-4 flex flex-col items-center justify-center border-2 border-neonCyan/40 shadow-[0_0_50px_rgba(0,168,255,0.3)] animate-float">
         <img
-          src="/assets/vigi-lock-logo.png"
+          src={VIGI_LOGO}
           alt="VIGI LOCK Official 3D Shield & Padlock"
           className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(0,245,255,0.6)]"
         />
